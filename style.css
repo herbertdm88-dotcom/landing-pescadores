@@ -1,93 +1,143 @@
-/* Estilos existentes ficam iguais, adicione abaixo ou substitua conforme indicado */
-
-/* --- Hero com carrossel --- */
-.hero-carousel {
-  position: relative;
-  overflow: hidden;
-  height: 400px;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* container que segura as slides */
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+}
+header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+header p {
+  color: #555;
+}
+
+/* Carrossel */
 .carousel-container {
-  width: 100%;
-  height: 100%;
   position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
-
-/* cada slide */
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 100%; /* começam fora da tela à direita */
+.carousel img {
   width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-
-.carousel-slide.active {
-  left: 0;
-  opacity: 1;
-}
-
-/* imagem dentro do slide */
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
+  height: 60vh;
   object-fit: cover;
+  display: block;
 }
-
-/* legenda sobre imagem */
-.carousel-caption {
+.caption {
   position: absolute;
-  bottom: 20%;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 2rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-/* setas */
-.carousel-btn {
+/* Botões */
+.prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(62,47,32,0.7);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
   padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-/* indicadores (bolinhas) */
-.carousel-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
+  background: rgba(0,0,0,0.3);
   border-radius: 50%;
-  background: rgba(255,255,255,0.7);
+  user-select: none;
+}
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
   cursor: pointer;
 }
-
 .dot.active {
-  background: #fff;
+  background-color: #333;
+}
+
+/* Grid */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.section h2 {
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* CTA */
+.cta {
+  background: #f4f4f4;
+  padding: 40px 20px;
+}
+.btn {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #128C7E;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 22px;
+  }
+  .carousel img {
+    height: 40vh;
+  }
+  .card img {
+    height: 150px;
+  }
 }

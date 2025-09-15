@@ -1,78 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pescadores de Relíquias</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Pescadores de Relíquias</h1>
+    <p>Antiguidades, colecionáveis e peças únicas</p>
+  </header>
 
-<header>
-  <h1>Pescadores de Relíquias</h1>
-  <p>Antiguidades, colecionáveis e peças únicas</p>
-</header>
+  <!-- Carrossel -->
+  <section class="carousel-container">
+    <div class="carousel">
+      <div class="slide active">
+        <img src="imagens/bg1.jpg" alt="Imagem 1">
+        <div class="caption">Arte e Antiguidade</div>
+      </div>
+      <div class="slide">
+        <img src="imagens/bg2.jpg" alt="Imagem 2">
+        <div class="caption">Peças Raras</div>
+      </div>
+      <div class="slide">
+        <img src="imagens/bg3.jpg" alt="Imagem 3">
+        <div class="caption">Coleções Exclusivas</div>
+      </div>
+    </div>
 
-<section class="hero-carousel">
-  <div class="carousel-container">
-    <div class="carousel-slide active">
-      <img src="imagens/bg1.jpg" alt="Imagem 1">
-      <div class="carousel-caption">Descubra tesouros que contam histórias</div>
-    </div>
-    <div class="carousel-slide">
-      <img src="imagens/bg2.jpg" alt="Imagem 2">
-      <div class="carousel-caption">Peças raras, únicas</div>
-    </div>
-    <div class="carousel-slide">
-      <img src="imagens/bg3.jpg" alt="Imagem 3">
-      <div class="carousel-caption">Arte e antiguidade</div>
-    </div>
-    <!-- setas -->
-    <button class="carousel-btn prev-btn">‹</button>
-    <button class="carousel-btn next-btn">›</button>
-    <!-- indicadores -->
-    <div class="carousel-dots">
-      <span class="dot active" data-slide="0"></span>
-      <span class="dot" data-slide="1"></span>
-      <span class="dot" data-slide="2"></span>
-    </div>
-  </div>
-</section>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
 
-<section class="section">
-  <h2>Destaques</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="imagens/antique-watch.jpg" alt="Relógio antigo">
-      <h3>Relógios Antigos</h3>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
-    <div class="card">
-      <img src="imagens/vintage-porcelain.jpg" alt="Louça antiga">
-      <h3>Louças Raras</h3>
-    </div>
-    <div class="card">
-      <img src="imagens/vintage-lamp.jpg" alt="Abajur antigo">
-      <h3>Iluminação Vintage</h3>
-    </div>
-    <div class="card">
-      <img src="imagens/antique-books.jpg" alt="Livros antigos">
-      <h3>Livros e Manuscritos</h3>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section cta">
-  <h2>Quer falar com a gente?</h2>
-  <p>Entre em contato e encontre a peça perfeita para sua coleção.</p>
-  <a href="https://wa.me/55SEUNUMERO?text=Olá,+quero+saber+mais+sobre+as+antiguidades!" target="_blank">
-    Fale no WhatsApp
-  </a>
-</section>
+  <!-- Destaques -->
+  <section class="section">
+    <h2>Destaques</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="imagens/antique-watch.jpg" alt="Relógio antigo">
+        <h3>Relógios Antigos</h3>
+      </div>
+      <div class="card">
+        <img src="imagens/vintage-porcelain.jpg" alt="Louça antiga">
+        <h3>Louças Raras</h3>
+      </div>
+      <div class="card">
+        <img src="imagens/vintage-lamp.jpg" alt="Abajur antigo">
+        <h3>Iluminação Vintage</h3>
+      </div>
+      <div class="card">
+        <img src="imagens/antique-books.jpg" alt="Livros antigos">
+        <h3>Livros e Manuscritos</h3>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Pescadores de Relíquias - Todos os direitos reservados</p>
-</footer>
+  <!-- Contato -->
+  <section class="section cta">
+    <h2>Quer falar com a gente?</h2>
+    <p>Entre em contato e encontre a peça perfeita para sua coleção.</p>
+    <a href="https://wa.me/55SEUNUMERO" target="_blank" class="btn">
+      Fale no WhatsApp
+    </a>
+  </section>
 
-<script src="carousel.js"></script>
+  <footer>
+    <p>&copy; 2025 Pescadores de Relíquias - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="carousel.js"></script>
 </body>
 </html>

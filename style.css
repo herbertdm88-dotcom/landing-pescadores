@@ -1,38 +1,59 @@
-/* Reset */
-* {
+/* Reset básico */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* Cabeçalho */
+/* Variáveis de cor */
+:root {
+  --cor-bg-claro: #F8F4EC;
+  --cor-texto-escuro: #3E2F20;
+  --cor-destaque: #25D366;
+  --cor-hover-destaque: #1DA851;
+  --cor-botao-bg: #3E2F20;
+  --cor-botao-hover: #654321;
+}
+
+/* Tipografia */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-bg-claro);
+  color: var(--cor-texto-escuro);
+  line-height: 1.5;
+}
+
 header {
   text-align: center;
   padding: 20px;
-  background: #fff;
+  background-color: var(--cor-bg-claro);
 }
+
 header h1 {
-  font-size: 28px;
-  margin-bottom: 8px;
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: var(--cor-texto-escuro);
 }
+
 header p {
-  color: #555;
+  font-size: 1.2rem;
+  color: var(--cor-texto-escuro);
 }
 
 /* Carrossel */
 .carousel-container {
   position: relative;
   max-width: 100%;
-  margin: auto;
   overflow: hidden;
 }
+
 .carousel img {
   width: 100%;
   height: 60vh;
   object-fit: cover;
   display: block;
 }
+
 .caption {
   position: absolute;
   bottom: 20px;
@@ -41,15 +62,17 @@ header p {
   color: #fff;
   background: rgba(0,0,0,0.5);
   padding: 10px 20px;
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
   border-radius: 5px;
 }
 
-/* Botões */
+/* Botões do carrossel */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 30px;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
   padding: 10px;
@@ -57,87 +80,118 @@ header p {
   border-radius: 50%;
   user-select: none;
 }
+
 .prev { left: 15px; }
 .next { right: 15px; }
 
-/* Dots */
+/* Dots (indicadores) */
 .dots {
   text-align: center;
   margin-top: 10px;
 }
+
 .dot {
   height: 12px;
   width: 12px;
   margin: 0 4px;
-  background-color: #bbb;
+  background-color: rgba(62,47,32,0.5);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
 }
+
 .dot.active {
-  background-color: #333;
+  background-color: var(--cor-texto-escuro);
 }
 
-/* Grid */
+/* Seções e cards */
 .section {
   padding: 40px 20px;
   text-align: center;
 }
+
 .section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  color: var(--cor-texto-escuro);
   margin-bottom: 20px;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-}
-.card h3 {
-  margin-top: 10px;
-  font-size: 18px;
 }
 
-/* CTA */
+.card h3 {
+  padding: 10px;
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: var(--cor-texto-escuro);
+}
+
+/* CTA botão */
 .cta {
-  background: #f4f4f4;
+  background-color: var(--cor-bg-claro);
   padding: 40px 20px;
 }
+
 .btn {
   display: inline-block;
-  background: #25D366;
-  color: white;
+  background-color: var(--cor-destaque);
+  color: #fff;
   padding: 12px 24px;
   border-radius: 8px;
+  font-size: 1.2rem;
   text-decoration: none;
-  margin-top: 10px;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
+
 .btn:hover {
-  background: #128C7E;
+  background-color: var(--cor-hover-destaque);
 }
 
 /* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
-  background: #222;
+  background-color: var(--cor-texto-escuro);
   color: #fff;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 22px;
+    font-size: 2rem;
   }
   .carousel img {
     height: 40vh;
   }
+  .caption {
+    font-size: 1.4rem;
+  }
   .card img {
     height: 150px;
+  }
+  .card h3 {
+    font-size: 1rem;
   }
 }
